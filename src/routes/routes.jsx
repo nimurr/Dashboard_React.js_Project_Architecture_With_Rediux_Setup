@@ -6,47 +6,26 @@ import ForgetPassword from "../page/Auth/ForgetPassword/ForgetPassword";
 import SignIn from "../page/Auth/SignIn/SignIn";
 import Otp from "../page/Auth/Otp/Otp";
 import NewPassword from "../page/Auth/NewPassword/NewPassword";
-import PersonalInformationPage from "../page/PersonalInformation/PersonalInformationPage";
 import SettingsPage from "../page/Settings/SettingsPage";
 import PrivacyPolicyPage from "../page/PrivacyPolicy/PrivacyPolicyPage";
 import TermsconditionPage from "../page/TermsCondition/TermsconditionPage";
 import AboutUsPage from "../page/AboutUs/AboutUsPage";
 import UsersPage from "../page/Users/UsersPage";
-// import AddItemPage from "../page/AddItem/AddItemPage";
 import Notification from "../component/Main/Notification/Notification";
-import EditPersonalInformationPage from "../page/EditPersonalInformationPage/EditPersonalInformationPage";
-// import AdminRoutes from "./AdminRoutes";
 import EditPrivacyPolicy from "../page/EditPrivacyPolicy/EditPrivacyPolicy";
 import EditTermsConditions from "../page/EditTermsConditions/EditTermsConditions";
 import EditAboutUs from "../page/EditAboutUs/EditAboutUs";
 import CategoriesPage from "../page/Categories/CategoriesPage";
-import EditCategoriesBoxPage from "../page/EditCategoriesBox/EditCategoriesBoxPage";
-import EventViewItemPage from "../page/EventViewItem/EventViewItemPage";
-import EventItemsPage from "../page/Event/EventPage";
-import WelcomePage from "../page/WelcomePage/welcomePage";
-import SuggestionPage from "../page/Suggestion/suggestion";
-import DonationPage from "../page/DonationPage/DonationPage";
-import EditWelcomePage from "../page/EditWelcomePage/EditWelcomePage";
-import AddCategoryPage from "../page/AddCategoryPage/AddCategoryPage";
-import UsersRequest from "../page/Users/UserRequest";
 import UserDetails from "../page/Users/UserDetails";
-import UserRequestDetails from "../page/Users/UserRequestDetails";
-import UserRequestList from "../page/Users/UserRequestList";
-import UserRequestListDetails from "../page/Users/UserRequestListDetails";
-import EventItemsPageTonamentDetials from "../page/Event/EventItemsPageTonamentDetials";
-import EventItems from "../component/Main/Event/EventItems";
-import EventItemsPageTonamentEdit from "../page/Event/EventItemsPageTonamentEdit";
-import Earnings from "../page/Earnings/Earnings";
+
+
 import Collaborator from "../page/Collaborator/Collaborator";
 import CollaboratorDetails from "../page/Collaborator/CollaboratorDetails";
 import Subscription from "../page/Subscription/Subscription";
 import Personalinfo from "../page/ProfileInfo/Personalinfo";
 import PersonalinfoEdit from "../page/ProfileInfo/PersonalinfoEdit";
 import AllFaq from "../page/Faq/AllFaq";
-import AllDocument from "../component/Main/AllDocument/AllDocument";
 import Lawyera from "../page/Lawyer/Lawyera";
-import PrivetRoute from "../PrivetRoute/PrivetRoute";
-
 
 
 const router = createBrowserRouter([
@@ -56,7 +35,7 @@ const router = createBrowserRouter([
       // <AdminRoutes>
       // </AdminRoutes>
       // <PrivetRout1e>  
-        <MainLayout />
+      <MainLayout />
       // </PrivetRout1e>
     ),
     errorElement: <h1>Error</h1>,
@@ -99,15 +78,13 @@ const router = createBrowserRouter([
         element: <Subscription />,
       },
 
-      {
-        path: "earnings",
-        element: <Earnings />,
-      },
 
       {
         path: "/notification",
         element: <Notification />,
       },
+
+      //? All Settings Routes
       {
         path: "settings",
         element: <SettingsPage />,
@@ -150,68 +127,6 @@ const router = createBrowserRouter([
       },
 
 
-
-
-
-
-      {
-        path: "/all-document",
-        element: <AllDocument />,
-      },
-
-
-
-      // {
-      //   path: "subscription/edit-box/:id",
-      //   element: <EditCategoriesBoxPage />,
-      // },
-      // {
-      //   path: "allevent",
-      //   element: <EventItems />,
-      // },
-      // {
-      //   path: "allevent/recent-tournament/:id",
-      //   element: <EventItemsPageTonamentDetials />,
-      // },
-      // {
-      //   path: "allevent/edit/:id",
-      //   element: <EventItemsPageTonamentEdit />,
-      // },
-
-
-      // {
-      //   path: "earnings",
-      //   element: <Earnings />,
-      // },
-      // {
-      //   path: "allevent/view-item/:id",
-      //   element: <EventViewItemPage />,
-      // },
-      // {
-      //   path: "Donation",
-      //   element: <DonationPage />,
-      // },
-      // {
-      //   path: "suggestion",
-      //   element: <SuggestionPage />,
-      // },
-      // {
-      //   path: "settings/personal-info",
-      //   element: <PersonalInformationPage />,
-      // },
-      // {
-      //   path: "settings/edit-personal-info",
-      //   element: <EditPersonalInformationPage />,
-      // },
-
-      // {
-      //   path: "settings/welcome-page",
-      //   element: <WelcomePage />,
-      // },
-      // {
-      //   path: "settings/welcome-page/edit",
-      //   element: <EditWelcomePage />,
-      // },
     ],
   },
   {

@@ -3,11 +3,10 @@ import { useState } from "react";
 import { IoIosLogOut } from "react-icons/io";
 import { IoBagHandleSharp, IoSettingsSharp } from "react-icons/io5";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from "/public/logo/dashboard_log.png";
+import logo from "/public/logo/dash_logo.png";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../../../redux/features/auth/authSlice";
-import { RiMoneyDollarCircleFill } from "react-icons/ri";
-import { FaBriefcase, FaCopy, FaUserAlt, FaUsers } from "react-icons/fa";
+import { FaUserAlt, FaUsers } from "react-icons/fa";
 import { MdDashboard, MdOutlineContactPage } from "react-icons/md";
 // import { GiLightBulb } from "react-icons/gi";
 import { HiLightBulb } from "react-icons/hi";
@@ -39,11 +38,6 @@ const sidebarItems = [
     icon: <GoHomeFill className="size-6" />,
   },
   {
-    path: "/all-document",
-    name: "All Document",
-    icon: <GrDocumentImage className="size-5" />,
-  },
-  {
     path: "/collaborator",
     name: "Collaborator ",
     icon: <FaUsers className="size-6" />,
@@ -53,41 +47,6 @@ const sidebarItems = [
     name: "Subscription ",
     icon: <MdOutlineContactPage className="size-6" />,
   },
-  {
-    path: "/earnings",
-    name: "Earnings ",
-    icon: <FaRegMoneyBill1 className="size-6" />,
-  },
-  // {
-  //   path: "/user-request",
-  //   name: "Super User Request",
-  //   icon: <FaBriefcase className="size-6" />,
-  // },
-  // {
-  //   path: "/allevent",
-  //   name: "All Tournament",
-  //   icon: <FaBriefcase className="size-6" />,
-  // },
-  // {
-  //   path: "/subscription",
-  //   name: "Subscription",
-  //   icon: <FaCopy className="size-6" />,
-  // },
-  // {
-  //   path: "/earnings",
-  //   name: "Earnings",
-  //   icon: <FaSackDollar className="size-6" />,
-  // },
-  // {
-  //   path: "/suggestion",
-  //   name: "Suggestion",
-  //   icon: <HiLightBulb className="size-8" />,
-  // },
-  // {
-  //   path: "/Donation",
-  //   name: "Donation",
-  //   icon: <RiMoneyDollarCircleFill className="size-6" />,
-  // },
   {
     path: "/settings",
     name: "Settings",
@@ -109,8 +68,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
     <div>
       {/* Desktop Sidebar */}
       <div className="hidden overflow-y-auto md:block w-full md:w-[200px] lg:w-[250px] xl:w-[280px] h-full bg-[#038c6d] fixed shadow-2xl">
-        <Link to={"/"} className="flex flex-col justify-center items-center pt-5 gap-2 bg-white mb-10 text-black">
-          <img src={logo} alt="logo" className="w-[60px] mb-5 " />
+        <Link to={"/"} className="flex flex-col justify-center items-center pt-5 gap-2">
+          <img src={logo} alt="logo" className="w-20 h-20 shadow rounded mb-5 " />
         </Link>
         <ul className="flex flex-col gap-5">
           {sidebarItems.map((item) => (
@@ -118,7 +77,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               key={item.name}
               to={item.path}
               className={({ isActive }) =>
-                `w-[80%] mx-auto px-5 py-2 flex justify-start items-center gap-3 text-white ${isActive ? "bg-white !text-black border-l-4 border-[#f13919]" : ""
+                `w-[80%] mx-auto px-5 py-2 flex justify-start items-center gap-3 rounded text-white ${isActive ? "bg-white !text-black " : ""
                 }`
               }
             >
@@ -144,10 +103,10 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           } transition-transform duration-300 ease-in-out md:hidden`}
       >
         <div onClick={toggleSidebar} className="absolute top-0 right-0 p-4">
-          <RxCross1 className="size-6 text-black" />
+          <RxCross1 className="size-6 text-white" />
         </div>
-        <div className="flex flex-col justify-center items-center pt-5 gap-2 bg-white text-white">
-          <img src={logo} alt="logo"  className="h-20 mb-5" />
+        <div className="flex flex-col justify-center items-center pt-5 gap-2 ">
+          <img src={logo} alt="logo" className=" w-20 h-20 rounded shadow mb-5" />
         </div>
         <ul className="flex flex-col gap-3 mt-10">
           {sidebarItems.map((item) => (
@@ -173,8 +132,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           }}
           className="flex items-center gap-2 px-10 ml-5 mt-5"
         >
-          <IoIosLogOut className="size-8   p-1 text-white rounded-md" />
-          <span className="text-black">Logout</span>
+          <IoIosLogOut className="size-8   p-1 text-red-500 rounded-md" />
+          <span className="text-red-500">Logout</span>
         </button>
       </div>
 
