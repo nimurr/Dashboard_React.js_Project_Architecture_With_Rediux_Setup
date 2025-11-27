@@ -14,8 +14,7 @@ import Notification from "../component/Main/Notification/Notification";
 import EditPrivacyPolicy from "../page/EditPrivacyPolicy/EditPrivacyPolicy";
 import EditTermsConditions from "../page/EditTermsConditions/EditTermsConditions";
 import EditAboutUs from "../page/EditAboutUs/EditAboutUs";
-
-import Subscription from "../page/Subscription/Subscription";
+ 
 import Personalinfo from "../page/ProfileInfo/Personalinfo";
 import PersonalinfoEdit from "../page/ProfileInfo/PersonalinfoEdit";
 import AllFaq from "../page/Faq/AllFaq";
@@ -37,11 +36,7 @@ const router = createBrowserRouter([
 
 
 
-
-      {
-        path: "subscription",
-        element: <Subscription />,
-      },
+ 
       {
         path: "/notification",
         element: <Notification />,
