@@ -10,33 +10,22 @@ import SettingsPage from "../page/Settings/SettingsPage";
 import PrivacyPolicyPage from "../page/PrivacyPolicy/PrivacyPolicyPage";
 import TermsconditionPage from "../page/TermsCondition/TermsconditionPage";
 import AboutUsPage from "../page/AboutUs/AboutUsPage";
-import UsersPage from "../page/Users/UsersPage";
 import Notification from "../component/Main/Notification/Notification";
 import EditPrivacyPolicy from "../page/EditPrivacyPolicy/EditPrivacyPolicy";
 import EditTermsConditions from "../page/EditTermsConditions/EditTermsConditions";
 import EditAboutUs from "../page/EditAboutUs/EditAboutUs";
-import CategoriesPage from "../page/Categories/CategoriesPage";
-import UserDetails from "../page/Users/UserDetails";
 
-
-import Collaborator from "../page/Collaborator/Collaborator";
-import CollaboratorDetails from "../page/Collaborator/CollaboratorDetails";
 import Subscription from "../page/Subscription/Subscription";
 import Personalinfo from "../page/ProfileInfo/Personalinfo";
 import PersonalinfoEdit from "../page/ProfileInfo/PersonalinfoEdit";
 import AllFaq from "../page/Faq/AllFaq";
-import Lawyera from "../page/Lawyer/Lawyera";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      // <AdminRoutes>
-      // </AdminRoutes>
-      // <PrivetRout1e>  
       <MainLayout />
-      // </PrivetRout1e>
     ),
     errorElement: <h1>Error</h1>,
     children: [
@@ -44,41 +33,15 @@ const router = createBrowserRouter([
         index: true,
         element: <DashboardHome />,
       },
-      {
-        path: "users",
-        element: <UsersPage />,
-      },
-      {
-        path: "users/:id",
-        element: <UserDetails />,
-      },
-
-      {
-        path: "lawyer",
-        element: <Lawyera />,
-      },
+      //? Start here
 
 
-      {
-        path: "assets",
-        element: <CategoriesPage />,
-      },
 
-      {
-        path: "collaborator",
-        element: <Collaborator />,
-      },
-      {
-        path: "collaborator/:id",
-        element: <CollaboratorDetails />,
-      },
 
       {
         path: "subscription",
         element: <Subscription />,
       },
-
-
       {
         path: "/notification",
         element: <Notification />,

@@ -1,18 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { IoIosLogOut } from "react-icons/io";
-import { IoBagHandleSharp, IoSettingsSharp } from "react-icons/io5";
+import { IoSettingsSharp } from "react-icons/io5";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "/public/logo/dash_logo.png";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../../../redux/features/auth/authSlice";
-import { FaUserAlt, FaUsers } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 import { MdDashboard, MdOutlineContactPage } from "react-icons/md";
-// import { GiLightBulb } from "react-icons/gi";
-import { HiLightBulb } from "react-icons/hi";
-import { FaRegMoneyBill1, FaSackDollar } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
-import { GrDocumentImage } from "react-icons/gr";
 import { RxCross1 } from "react-icons/rx";
 
 const sidebarItems = [
@@ -21,27 +17,8 @@ const sidebarItems = [
     name: "Dashboard",
     icon: <MdDashboard className="size-6" />,
   },
-  {
-    path: "/users",
-    name: "User",
-    icon: <FaUserAlt className="size-6" />,
-  },
+  //? Start here
 
-  {
-    path: "/lawyer",
-    name: "Lawyer",
-    icon: <FaUsers className="size-6" />,
-  },
-  {
-    path: "/assets",
-    name: "Categories",
-    icon: <GoHomeFill className="size-6" />,
-  },
-  {
-    path: "/collaborator",
-    name: "Collaborator ",
-    icon: <FaUsers className="size-6" />,
-  },
   {
     path: "/subscription",
     name: "Subscription ",
