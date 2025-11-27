@@ -19,11 +19,7 @@ const sidebarItems = [
   },
   //? Start here
 
-  {
-    path: "/subscription",
-    name: "Subscription ",
-    icon: <MdOutlineContactPage className="size-6" />,
-  },
+  
   {
     path: "/settings",
     name: "Settings",
