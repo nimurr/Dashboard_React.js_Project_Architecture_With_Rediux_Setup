@@ -6,9 +6,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "/public/logo/dash_logo.png";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../../../redux/features/auth/authSlice";
-import { FaUsers } from "react-icons/fa";
-import { MdDashboard, MdOutlineContactPage } from "react-icons/md";
-import { GoHomeFill } from "react-icons/go";
+import { MdDashboard } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 
 const sidebarItems = [
@@ -19,7 +17,7 @@ const sidebarItems = [
   },
   //? Start here
 
-  
+
   {
     path: "/settings",
     name: "Settings",
