@@ -84,7 +84,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             <NavLink
               key={item.name}
               to={item.path}
-              onClick={toggleSidebar} // Close sidebar on link click
+              onClick={toggleSidebar}
               className={({ isActive }) =>
                 `w-[70%] mx-auto px-5 py-2 flex items-center gap-3 text-white ${isActive ? "bg-[#038c6d] " : ""
                 }`
